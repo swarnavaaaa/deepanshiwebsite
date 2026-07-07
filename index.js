@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Navigation & Page routing
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.nav-links a');
-  const logo = document.querySelector('.logo');
   const mobileMenuToggle = document.getElementById('menuToggle');
   const navLinksList = document.querySelector('.nav-links');
 
