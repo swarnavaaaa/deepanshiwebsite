@@ -490,7 +490,7 @@ main {
 /* Practice layout breaks */
 .practice-header {
   max-width: 800px;
-  margin-bottom: var(--space-xl);
+  margin-bottom: 0;
 }
 
 .practice-quote-block {
