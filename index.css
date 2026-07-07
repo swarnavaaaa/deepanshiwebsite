@@ -368,7 +368,7 @@ main {
 
 /* Specifying image ratios to avoid placeholders */
 .image-home {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
 }
 
 .image-about {
