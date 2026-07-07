@@ -4,7 +4,7 @@
   Style Guide: Asymmetric Editorial Space / Subdued Extimacy
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Lora:wght@400;500&display=swap');
 
 :root {
   /* Color Story */
@@ -40,6 +40,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Reset any tags that browser defaults to italic */
+em, i, cite, dfn, var, address {
+  font-style: normal;
 }
 
 /* Accessibility Focus States */
@@ -132,8 +137,18 @@ h1, h2, h3, h4 {
   font-family: var(--font-title);
   font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
   line-height: 1.2;
+}
+
+h3 {
+  font-family: var(--font-ui);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  line-height: 1.4;
 }
 
 .quote-text {
@@ -445,7 +460,31 @@ main {
 }
 
 .timeline-content span {
-  font-style: italic;
+  font-style: normal;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
+}
+
+.timeline-list li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
 }
 
 /* Practice layout breaks */
@@ -500,13 +539,8 @@ main {
 }
 
 .contact-info-block h3 {
-  font-family: var(--font-ui);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
   color: var(--color-muted);
   margin-bottom: var(--space-sm);
-  font-weight: 600;
 }
 
 .contact-info-block p {
