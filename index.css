@@ -373,7 +373,6 @@ main {
   align-items: center;
 }
 
-.home-text-block .quote-text,
 .home-text-block .body-text {
   text-align: justify;
 }
@@ -381,19 +380,20 @@ main {
 @media (min-width: 992px) {
   .home-grid {
     grid-template-columns: 1fr 1.1fr;
+    grid-template-areas: "image text";
     gap: var(--space-xl);
     max-width: 1000px;
     margin: 0 auto;
   }
   
   .home-text-block {
-    grid-column: 2;
+    grid-area: text;
     padding-left: var(--space-lg);
     padding-right: 0;
   }
   
   .home-image-block {
-    grid-column: 1;
+    grid-area: image;
   }
 }
 
