@@ -139,6 +139,8 @@ h1, h2, h3, h4 {
   font-weight: 300;
   font-style: normal;
   line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 h3 {
