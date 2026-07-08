@@ -418,6 +418,38 @@ main {
   border-color: var(--color-accent);
 }
 
+/* Editorial Button */
+.editorial-button {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text);
+  background-color: transparent;
+  border: 1px solid var(--color-text);
+  padding: 0.9rem 2.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: var(--space-md);
+  cursor: pointer;
+  text-align: center;
+}
+
+.editorial-button:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.editorial-button:active,
+.editorial-button:focus {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+  outline: none;
+}
+
 /* Bio Timeline */
 .timeline {
   margin-top: var(--space-lg);
