@@ -373,19 +373,27 @@ main {
   align-items: center;
 }
 
+.home-text-block .quote-text,
+.home-text-block .body-text {
+  text-align: justify;
+}
+
 @media (min-width: 992px) {
   .home-grid {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 1fr 1.1fr;
     gap: var(--space-xl);
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
   .home-text-block {
-    grid-column: 1 / 7;
-    padding-right: var(--space-lg);
+    grid-column: 2;
+    padding-left: var(--space-lg);
+    padding-right: 0;
   }
   
   .home-image-block {
-    grid-column: 7 / 13;
+    grid-column: 1;
   }
 }
 
