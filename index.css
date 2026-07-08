@@ -365,6 +365,10 @@ main {
   aspect-ratio: 4 / 3;
 }
 
+.image-portrait {
+  aspect-ratio: 3 / 4;
+}
+
 /* Custom layout breaking for home */
 .home-grid {
   display: grid;
