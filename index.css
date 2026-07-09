@@ -428,9 +428,22 @@ main {
     padding-right: 0;
   }
   
-  .home-image-block,
+  .home-image-block {
+    grid-area: image;
+  }
+
+  .practice-grid {
+    align-items: stretch;
+  }
+
   .practice-image-block {
     grid-area: image;
+    display: flex;
+  }
+
+  .practice-image-block .editorial-image-wrapper {
+    aspect-ratio: auto;
+    height: 100%;
   }
 }
 
