@@ -75,6 +75,19 @@ em, i, cite, dfn, var, address {
   outline: none;
 }
 
+/* Screen readers only / SEO helper */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -393,7 +406,8 @@ main {
 }
 
 .home-text-block .body-text,
-.practice-text-block .body-text {
+.practice-text-block .body-text,
+#about .body-text p {
   text-align: justify;
 }
 
