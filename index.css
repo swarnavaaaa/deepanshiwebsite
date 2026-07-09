@@ -889,3 +889,22 @@ footer {
   vertical-align: middle;
 }
 
+/* Mobile responsive adjustments for the practice section illustration */
+@media (max-width: 991px) {
+  .practice-image-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .practice-image-block .editorial-image-wrapper.image-portrait {
+    width: 60%;
+    max-width: 240px;
+    aspect-ratio: auto;
+    background-color: transparent;
+  }
+
+  .practice-image-block .editorial-image-wrapper.image-portrait img {
+    height: auto;
+    object-fit: contain;
+  }
+}
