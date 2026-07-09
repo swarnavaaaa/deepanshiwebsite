@@ -418,6 +418,7 @@ main {
     gap: var(--space-xl);
     max-width: 1100px;
     margin: 0 auto;
+    align-items: stretch;
   }
   
   .practice-grid {
@@ -442,17 +443,23 @@ main {
   
   .home-image-block {
     grid-area: image;
+    display: flex;
   }
 
+  .home-image-block .editorial-image-wrapper {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+ 
   .practice-heading {
     grid-area: heading;
   }
-
+ 
   .practice-image-block {
     grid-area: image;
     display: flex;
   }
-
+ 
   .practice-image-block .editorial-image-wrapper {
     aspect-ratio: auto;
     height: 100%;
