@@ -405,6 +405,17 @@ main {
   align-items: center;
 }
 
+/* Mobile order for practice section (Heading -> Text -> Image) */
+.practice-heading {
+  order: 1;
+}
+.practice-text-block {
+  order: 2;
+}
+.practice-image-block {
+  order: 3;
+}
+
 .home-text-block .body-text,
 .practice-text-block .body-text,
 #about .body-text p {
