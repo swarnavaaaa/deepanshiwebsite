@@ -431,7 +431,9 @@ main {
 
 /* Editorial Button */
 .editorial-button {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: var(--space-md) auto 0;
   font-family: var(--font-ui);
   font-size: 0.8rem;
   font-weight: 600;
@@ -443,7 +445,6 @@ main {
   padding: 0.9rem 2.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  margin-top: var(--space-md);
   cursor: pointer;
   text-align: center;
 }
