@@ -412,13 +412,25 @@ main {
 }
 
 @media (min-width: 992px) {
-  .home-grid,
-  .practice-grid {
+  .home-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "image text";
     gap: var(--space-xl);
     max-width: 1100px;
     margin: 0 auto;
+  }
+  
+  .practice-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      ". heading"
+      "image text";
+    column-gap: var(--space-xl);
+    row-gap: var(--space-md);
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
   }
   
   .home-text-block,
@@ -432,8 +444,8 @@ main {
     grid-area: image;
   }
 
-  .practice-grid {
-    align-items: stretch;
+  .practice-heading {
+    grid-area: heading;
   }
 
   .practice-image-block {
