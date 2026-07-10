@@ -79,12 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('name').value.trim();
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
       const email = document.getElementById('email').value.trim();
       const message = document.getElementById('message').value.trim();
       const submitBtn = contactForm.querySelector('.submit-button');
 
-      if (!name || !email || !message) {
+      if (!firstName || !lastName || !phone || !email || !message) {
         showStatus('Please complete all fields.', true);
         return;
       }
@@ -93,10 +95,26 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      // Simulate API call
-      setTimeout(() => {
-        console.log('Form submission received:', { name, email, message });
-        
+      // Prepare form data for Google Forms
+      const formData = new FormData();
+      formData.append('entry.517540454', firstName);
+      formData.append('entry.1857266835', lastName);
+      formData.append('entry.876569236', phone);
+      formData.append('entry.560804901', email);
+      formData.append('entry.30623709', message);
+
+      const urlEncodedData = new URLSearchParams(formData).toString();
+
+      // Submit to Google Forms via no-cors fetch
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLSeXauGLys_1NqdTzeIyYXle6TtwDIpoYPXcADkwaV5IHovmEA/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: urlEncodedData
+      })
+      .then(() => {
         // Reset form
         contactForm.reset();
         
@@ -106,7 +124,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Show success status
         showStatus('Your message has been sent successfully.', false);
-      }, 1200);
+      })
+      .catch((error) => {
+        console.error('Submission error:', error);
+        
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send';
+        
+        // Show error status
+        showStatus('There was a problem sending your message. Please try again.', true);
+      });
     });
   }
 

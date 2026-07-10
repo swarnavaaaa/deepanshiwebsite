@@ -8,7 +8,7 @@
   <title>Deepanshi Gupta | Psychoanalytic therapist</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Online Psychotherapy">
+  <meta name="description" content="Psychoanalytic practice of Deepanshi Gupta. A quiet, contemplative space to explore the human mind through Lacanian psychoanalysis.">
   <meta name="keywords" content="Deepanshi Gupta, Deepnashi Gupta, Psychoanalytic therapist, Online Psychotherapy, Psychoanalysis, Lacanian Psychoanalysis, Psychotherapy, Therapist, Psychoanalyst, Mental Health, Therapy, Online Therapy, Qafila">
   <meta name="author" content="Deepanshi Gupta">
   
@@ -16,17 +16,18 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.deepanshigupta.com/">
   <meta property="og:title" content="Deepanshi Gupta | Psychoanalytic therapist">
-  <meta property="og:description" content="Online Psychotherapy">
+  <meta property="og:description" content="Psychoanalytic practice of Deepanshi Gupta. A quiet, contemplative space to explore the human mind through Lacanian psychoanalysis.">
   <meta property="og:image" content="assets/subconscious_layers.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.deepanshigupta.com/">
   <meta property="twitter:title" content="Deepanshi Gupta | Psychoanalytic therapist">
-  <meta property="twitter:description" content="Online Psychotherapy">
+  <meta property="twitter:description" content="Psychoanalytic practice of Deepanshi Gupta. A quiet, contemplative space to explore the human mind through Lacanian psychoanalysis.">
   <meta property="twitter:image" content="assets/subconscious_layers.png">
 
-  <!-- Stylesheet -->
+  <!-- Stylesheet & Favicon -->
+  <link rel="icon" href="data:,">
   <link rel="stylesheet" href="index.css">
 
   <!-- JSON-LD Structured Data for SEO -->
@@ -37,7 +38,7 @@
     "name": "Deepanshi Gupta",
     "alternateName": "Deepnashi Gupta",
     "jobTitle": "Psychoanalytic Therapist",
-    "description": "Online Psychotherapy by Deepanshi Gupta.",
+    "description": "Psychoanalytic practice of Deepanshi Gupta. A quiet, contemplative space to explore the human mind through Lacanian psychoanalysis.",
     "url": "https://www.deepanshigupta.com/",
     "sameAs": [
       "https://www.linkedin.com/in/deepanshi-gupta-872618149?utm_source=share_via&utm_content=profile&utm_medium=member_android",
@@ -98,7 +99,7 @@
           
           <div class="home-image-block">
             <div class="editorial-image-wrapper image-home">
-              <img src="assets/For%20homepage.png" alt="Lacanian psychoanalysis space illustration" loading="eager">
+              <img src="assets/For%20homepage.png" alt="Lacanian psychoanalysis space illustration" loading="eager" width="1080" height="1350">
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@
           </div>
           
           <div class="editorial-image-wrapper image-about" style="margin: var(--space-sm) 0; background-color: transparent;">
-            <img src="assets/About.png" alt="Portrait of Deepanshi Gupta" loading="lazy">
+            <img src="assets/About.png" alt="Portrait of Deepanshi Gupta" loading="lazy" width="1280" height="720">
           </div>
 
           <h2 class="section-title" style="margin-top: 0; margin-bottom: var(--space-md);">My Work</h2>
@@ -140,7 +141,7 @@
         <div class="practice-grid">
           <div class="practice-image-block">
             <div class="editorial-image-wrapper image-portrait image-fill">
-              <img src="assets/For%20Practice%20Page.png" alt="Clinical practice consulting space" loading="lazy">
+              <img src="assets/For%20Practice%20Page.png" alt="Clinical practice consulting space" loading="lazy" width="1080" height="1920">
             </div>
           </div>
 
@@ -190,9 +191,30 @@
           </div>
 
           <div>
-            <div class="google-form-embed-wrapper" style="width: 100%; height: 850px; overflow: hidden; border: 1px solid var(--color-border); background-color: var(--color-bg);">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXauGLys_1NqdTzeIyYXle6TtwDIpoYPXcADkwaV5IHovmEA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" style="border: none; display: block;" title="Inquiry Form">Loading…</iframe>
-            </div>
+            <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeXauGLys_1NqdTzeIyYXle6TtwDIpoYPXcADkwaV5IHovmEA/formResponse" method="POST">
+              <div class="form-group">
+                <input type="text" id="firstName" name="entry.517540454" class="form-input" placeholder=" " required>
+                <label for="firstName" class="form-label">First Name</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="lastName" name="entry.1857266835" class="form-input" placeholder=" " required>
+                <label for="lastName" class="form-label">Last Name</label>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="entry.876569236" class="form-input" placeholder=" " required>
+                <label for="phone" class="form-label">Phone Number</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="entry.560804901" class="form-input" placeholder=" " required>
+                <label for="email" class="form-label">Email Address</label>
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="entry.30623709" class="form-input" placeholder=" " required></textarea>
+                <label for="message" class="form-label">Your message</label>
+              </div>
+              <button type="submit" class="submit-button">Send</button>
+              <div id="formStatus" class="form-status"></div>
+            </form>
           </div>
         </div>
       </section>
